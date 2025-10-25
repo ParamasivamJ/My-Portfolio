@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramasivam J - Fabric Data Engineer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-dark antialiased selection:bg-primary/70 selection:text-white">
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+    
+    <!-- 
+      =================================
+      HEADER / NAV
+      =================================
+    -->
+    <header>
+        <!-- Scroll Progress -->
+        <div class="scroll-progress"></div>
+        
+        <nav>
+            <!-- Logo -->
+            <a href="#" class="logo-container flex items-center gap-3 group">
+                <span class="logo-gradient flex items-center justify-center gap-0.5 transition-all duration-300">
+                    <i data-lucide="brain-circuit" class="w-4 h-4 text-white"></i>
+                    <i data-lucide="database" class="w-3 h-3 text-white opacity-80"></i>
+                </span>
+                <span class="logo-text">
+                    Paramasivam J
+                </span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex md:items-center md:space-x-1">
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
+                <a href="#timeline" class="nav-link">
+                    Timeline
+                </a>
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+            </div>
+            
+            <!-- Utility Icons -->
+            <div class="social-icons">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i data-lucide="sun" class="inline-block light:hidden dark:inline-block"></i>
+                    <i data-lucide="moon" class="inline-block light:inline-block dark:hidden"></i>
+                </button>
+
+                
+                <!-- GitHub -->
+                <a href="https://github.com/paramasivamj" target="_blank" rel="noopener noreferrer" 
+                   class="social-icon github" aria-label="GitHub Profile">
+                    <i data-lucide="github"></i>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/paramasivam-j-386628270/" target="_blank" rel="noopener noreferrer" 
+                   class="social-icon linkedin" aria-label="LinkedIn Profile">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                
+                <!-- LeetCode -->
+                <a href="https://leetcode.com/u/PARAMASIVAM_J/" target="_blank" rel="noopener noreferrer" 
+                   class="social-icon leetcode" aria-label="LeetCode Profile">
+                    <i data-lucide="code" class="leetcode-icon"></i>
+                </a>
+                
+                <!-- Microsoft Learn -->
+                <a href="https://learn.microsoft.com/en-us/users/paramasivamj-6233/achievements?tab=tab-learning-paths" target="_blank" rel="noopener noreferrer" 
+                   class="social-icon microsoft" aria-label="Microsoft Learn Profile">
+                    <i data-lucide="award" class="microsoft-icon"></i>
+                </a>
+                
+                <!-- Google Cloud -->
+                <a href="https://cloudskillsboost.google/public_profiles/6214b29f-5a2e-4cd7-90df-5821a29931b5" target="_blank" rel="noopener noreferrer" 
+                   class="social-icon google-cloud" aria-label="Google Cloud Profile">
+                    <i data-lucide="cloud" class="google-cloud-icon"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+      =================================
+      MAIN CONTENT
+      =================================
+    -->
+    <main class="container mx-auto max-w-6xl px-4">
+        
+        <!-- 
+          =================================
+          HERO
+          =================================
+        -->
+        <section id="hero" class="py-24 md:py-40 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left: Headline -->
+                <div class="reveal">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 text-accent-mint font-medium text-sm rounded-full border border-green-500/30">
+                        <span class="w-2 h-2 bg-accent-mint rounded-full animate-pulse"></span>
+                        Available for new opportunities
+                    </span>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mt-6">
+                        I'm <span class="accent-gradient">Paramasivam</span><br>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-slate-400 light:text-slate-600 mt-6">
+                        Final-year student with hands-on experience in building end-to-end data pipelines on Azure and Microsoft Fabric. Proficient in Python, SQL, PySpark, Core Java and cloud-native analytics.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mt-10">
+                        <a href="#projects" class="inline-flex items-center justify-center px-8 py-3 font-medium text-center text-light dark:text-light light:text-dark bg-slate-700/50 light:bg-slate-200/80 rounded-lg hover:bg-slate-700 light:hover:bg-slate-300 transition-colors duration-300">
+                            View Projects
+                        </a>
+                        <a href="https://drive.google.com/file/d/1tnTT7l3S9EOBjx-EM-vKNXCNb_G5wA0O/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 font-medium text-center text-light dark:text-light light:text-dark bg-slate-700/50 light:bg-slate-200/80 rounded-lg hover:bg-slate-700 light:hover:bg-slate-300 transition-colors duration-300">
+                            <i data-lucide="file-text" class="w-4 h-4 mr-2 -ml-1"></i>
+                            View Resume
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-3 font-medium rounded-lg 
+                                            text-light bg-gradient-to-r from-primary to-primary-to shadow-lg 
+                                            hover:shadow-primary/50 transition-shadow duration-300 focus-visible:ring-primary">
+                                         Get in Touch
+                       </a>
+
+                    </div>
+                </div>
+                
+                <!-- Right: Project Mosaic (Animated) -->
+                <div class="reveal hidden md:grid grid-cols-2 gap-4" style="animation-delay: 200ms;">
+                    <div class="p-4 glass-panel flex flex-col items-center justify-center gap-3 aspect-square transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <i data-lucide="database-zap" class="w-12 h-12 text-primary"></i>
+                        <span class="font-heading font-semibold text-light dark:text-light light:text-dark">Azure Pipelines</span>
+                    </div>
+                    <div class="p-4 glass-panel flex flex-col items-center justify-center gap-3 aspect-square transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" style="transform: translateY(2rem);">
+                        <i data-lucide="database" class="w-12 h-12 text-purple-400"></i>
+                        <span class="font-heading font-semibold text-light dark:text-light light:text-dark">Database and SQL</span>
+                    </div>
+
+                    <div class="p-4 glass-panel flex flex-col items-center justify-center gap-3 aspect-square transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <i data-lucide="brain-circuit" class="w-12 h-12 text-accent-mint"></i>
+                        <span class="font-heading font-semibold text-light dark:text-light light:text-dark">AI / ML</span>
+                    </div>
+                    <div class="p-4 glass-panel flex flex-col items-center justify-center gap-3 aspect-square transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" style="transform: translateY(2rem);">
+                        <i data-lucide="code-2" class="w-12 h-12 text-accent-amber"></i>
+                        <span class="font-heading font-semibold text-light dark:text-light light:text-dark">PySpark</span>
+                    </div>
+                </div>
+            </div>
+        
+            
+        </section>
+
+        <!-- 
+          =================================
+          PROJECTS
+          =================================
+        -->
+        <section id="projects" class="py-24 md:py-32 scroll-mt-20">
+            <!-- Section Header -->
+            <div class="reveal max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-light dark:text-light light:text-dark">
+                    Featured Projects
+                </h2>
+                <p class="text-lg text-slate-400 light:text-slate-600 mt-4">
+                    A selection of projects demonstrating my skills in data engineering, cloud, and AI.
+                </p>
+            </div>
+            
+            <!-- Filter Chips -->
+            <div class="reveal flex flex-wrap justify-center gap-2 md:gap-3 mt-10">
+                <button class="filter-chip active" data-filter="all">All</button>
+                <button class="filter-chip" data-filter="azure">Azure</button>
+                <button class="filter-chip" data-filter="ml/ai">ML / AI</button>
+                <button class="filter-chip" data-filter="python">Python</button>
+            </div>
+            
+            <!-- Project Grid -->
+            <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-12">
+                
+                <!-- Project 1: E2E Data Engineering -->
+                <div class="project-card reveal glass-panel flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-tags="azure,python" style="animation-delay: 100ms;">
+                    <div class="block w-full text-left" aria-label="End-to-End Data Engineering Project">
+                        <div class="aspect-video bg-slate-700/50 light:bg-slate-200 flex items-center justify-center p-4">
+                            <!-- Placeholder graphic -->
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="database" class="w-6 h-6 text-primary"></i>
+                                <i data-lucide="move-right" class="w-5 h-5 text-slate-500"></i>
+                                <i data-lucide="cloud-cog" class="w-6 h-6 text-primary"></i>
+                                <i data-lucide="move-right" class="w-5 h-5 text-slate-500"></i>
+                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-primary-to"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-light dark:text-light light:text-dark">End-to-End Data Engineering Project</h3>
+                                <p class="text-sm text-slate-400 light:text-slate-600 mt-2 line-clamp-3">
+                                    Designed and implemented scalable ETL pipelines using Azure Data Factory, Data Lake, and Databricks to process the AdventureWorks dataset for analytics.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="tech-badge bg-blue-500/10 text-blue-400">Azure</span>
+                                    <span class="tech-badge bg-orange-500/10 text-orange-400">Data Factory</span>
+                                    <span class="tech-badge bg-cyan-500/10 text-cyan-400">Databricks</span>
+                                </div>
+                            </div>
+                            <!-- External Links -->
+                            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-slate-700/50 light:border-slate-200/80">
+                                <a href="https://github.com/ParamasivamJ/Azure_Data_Engineering" target="_blank" rel="noopener noreferrer" class="link-button z-10 relative" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" class="w-4 h-4 mr-1.5"></i>
+                                    GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/pulse/building-end-to-end-data-engineering-solution-azure-paramasivam-j-uzlac/?trackingId=kYJXRXC5RDSEZz7hxBfIcQ%3D%3D" target="_blank" rel="noopener noreferrer" class="link-button z-10 relative" onclick="event.stopPropagation()">
+                                    <i data-lucide="book-open" class="w-4 h-4 mr-1.5"></i>
+                                    Article
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Sentiment-Aware Chatbot -->
+                <div class="project-card reveal glass-panel flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-tags="ml/ai,python" style="animation-delay: 200ms;">
+                    <div class="block w-full text-left" aria-label="Sentiment-Aware Chatbot">
+                        <div class="aspect-video bg-slate-700/50 light:bg-slate-200 flex items-center justify-center p-4">
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-accent-mint"></i>
+                                <i data-lucide="move-right" class="w-5 h-5 text-slate-500"></i>
+                                <i data-lucide="brain-circuit" class="w-6 h-6 text-accent-mint"></i>
+                                <i data-lucide="move-right" class="w-5 h-5 text-slate-500"></i>
+                                <i data-lucide="smile-plus" class="w-6 h-6 text-accent-mint"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-light dark:text-light light:text-dark">Sentiment-Aware Chatbot</h3>
+                                <p class="text-sm text-slate-400 light:text-slate-600 mt-2 line-clamp-3">
+                                    Developed a chatbot using a fine-tuned BERT model for sentiment classification and an open-source LLM for text generation, leveraging OpenVINO for faster CPU inference.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="tech-badge bg-green-500/10 text-green-400">ML / AI</span>
+                                    <span class="tech-badge bg-purple-500/10 text-purple-400">BERT</span>
+                                    <span class="tech-badge bg-yellow-500/10 text-yellow-400">LLM</span>
+                                    <span class="tech-badge bg-gray-500/10 text-gray-400">OpenVINO</span>
+                                </div>
+                            </div>
+                            <!-- External Links -->
+                            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-slate-700/50 light:border-slate-200/80">
+                                <a href="https://github.com/ParamasivamJ/Sentiment-Analysis-Chatbot" target="_blank" rel="noopener noreferrer" class="link-button z-10 relative" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" class="w-4 h-4 mr-1.5"></i>
+                                    GitHub
+                                </a>
+                                <a href="https://github.com/ParamasivamJ/Hidevs_Gen_AI_Program_Cohort-1/tree/main/Week-4" target="_blank" rel="noopener noreferrer" class="link-button z-10 relative" onclick="event.stopPropagation()">
+                                    <i data-lucide="file-text" class="w-4 h-4 mr-1.5"></i>
+                                    Article
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Job Application Email Generator -->
+                <div class="project-card reveal glass-panel flex flex-col overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1" data-tags="python,ml/ai,azure" style="animation-delay: 300ms;">
+                    <div class="block w-full text-left" aria-label="Job Application Email Generator">
+                        <div class="aspect-video bg-slate-700/50 light:bg-slate-200 flex items-center justify-center p-4">
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="link" class="w-6 h-6 text-accent-amber"></i>
+                                <i data-lucide="move-right" class="w-5 h-5 text-slate-500"></i>
+                                <i data-lucide="file-text" class="w-6 h-6 text-accent-amber"></i>
+                                <i data-lucide="move-right" class="w-5 h-5 text-slate-500"></i>
+                                <i data-lucide="send" class="w-6 h-6 text-accent-amber"></i>
+                            </div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold text-light dark:text-light light:text-dark">Job Application Email Generator</h3>
+                                <p class="text-sm text-slate-400 light:text-slate-600 mt-2 line-clamp-3">
+                                    Created a Flask-based tool to web-scrape job details and use Llama 3.1 to generate personalized application emails. Deployed on Azure Web Apps with CI/CD.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span class="tech-badge bg-yellow-500/10 text-yellow-400">Python</span>
+                                    <span class="tech-badge bg-gray-500/10 text-gray-400">Flask</span>
+                                    <span class="tech-badge bg-blue-500/10 text-blue-400">Azure</span>
+                                    <span class="tech-badge bg-green-500/10 text-green-400">LLM</span>
+                                </div>
+                            </div>
+                            <!-- External Links -->
+                            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-slate-700/50 light:border-slate-200/80">
+                                <a href="https://github.com/ParamasivamJ/Job-email-generator" target="_blank" rel="noopener noreferrer" class="link-button z-10 relative" onclick="event.stopPropagation()">
+                                    <i data-lucide="github" class="w-4 h-4 mr-1.5"></i>
+                                    GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/pulse/transforming-job-applications-ai-introducing-application-j-dybsc/?trackingId=kYJXRXC5RDSEZz7hxBfIcQ%3D%3D" target="_blank" rel="noopener noreferrer" class="link-button z-10 relative" onclick="event.stopPropagation()">
+                                    <i data-lucide="file-text" class="w-4 h-4 mr-1.5"></i>
+                                    Article
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub CTA -->
+            <div class="reveal mt-12 text-center">
+                <div class="glass-panel p-4 md:p-6 relative overflow-hidden">
+                    <!-- Background glow (can also reduce blur if needed) -->
+                    <div class="absolute -top-1/2 -left-1/4 w-full h-full bg-primary/10 blur-[60px] opacity-50 rounded-full"></div>
+                    <div class="absolute -bottom-1/2 -right-1/4 w-full h-full bg-primary-to/10 blur-[60px] opacity-50 rounded-full"></div>
+                    
+                    <div class="relative z-10 max-w-xl mx-auto">
+                        <!-- Icon -->
+                        <div class="flex justify-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-primary to-primary-to rounded-xl flex items-center justify-center">
+                                <i data-lucide="github" class="w-6 h-6 text-white"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Heading -->
+                        <h3 class="text-xl md:text-2xl font-bold text-light dark:text-light light:text-dark mb-3">
+                            One more step before you proceed...
+                        </h3>
+                        
+                        <!-- Description -->
+                        <p class="text-base text-slate-400 light:text-slate-600 mb-4">
+                            These are just a few highlights from my portfolio. Explore more projects, code samples, and ongoing experiments on my GitHub profile.
+                        </p>
+                        
+                       <a href="https://github.com/paramasivamj" target="_blank" rel="noopener noreferrer" 
+                                class="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-center 
+                                text-light rounded-lg bg-gradient-to-r from-primary to-primary-to shadow-md 
+                                hover:shadow-primary/30 transition-all duration-300 hover:scale-105 focus-visible:ring-primary">
+                            <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+                            Explore My GitHub
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 
+          =================================
+          CERTIFICATIONS
+          =================================
+        -->
+        <section id="certifications" class="py-24 md:py-32 scroll-mt-20">
+            <!-- Section Header -->
+            <div class="reveal max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-light dark:text-light light:text-dark">
+                    Certifications
+                </h2>
+                <p class="text-lg text-slate-400 light:text-slate-600 mt-4">
+                    Validated expertise through industry-recognized Microsoft certifications.
+                </p>
+            </div>
+            
+            <div class="reveal max-w-4xl mx-auto mt-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Microsoft Fabric Data Engineer Associate -->
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/PARAMASIVAMJ-6233/BA747938A2C1B70E?sharingId=267E1176F019F868" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="glass-panel p-6 flex items-center gap-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="award" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-light dark:text-light light:text-dark group-hover:text-primary transition-colors">
+                                Fabric Data Engineer Associate
+                            </h3>
+                            <p class="text-sm text-slate-400 light:text-slate-600 mt-1">Microsoft</p>
+                        </div>
+                        <i data-lucide="external-link" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors flex-shrink-0"></i>
+                    </a>
+
+                    <!-- Microsoft Fabric Analytics Engineer Associate -->
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/PARAMASIVAMJ-6233/69DA64CCCFDE18BF?sharingId=267E1176F019F868" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="glass-panel p-6 flex items-center gap-4 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
+                        <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                            <i data-lucide="award" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-lg font-bold text-light dark:text-light light:text-dark group-hover:text-primary transition-colors">
+                                Fabric Analytics Engineer Associate
+                            </h3>
+                            <p class="text-sm text-slate-400 light:text-slate-600 mt-1">Microsoft</p>
+                        </div>
+                        <i data-lucide="external-link" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors flex-shrink-0"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          =================================
+          TECHNICAL SKILLS
+          =================================
+        -->
+        <section id="skills" class="py-24 md:py-32 scroll-mt-20">
+            <!-- Section Header -->
+            <div class="reveal max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-light dark:text-light light:text-dark">
+                    Technical Skills
+                </h2>
+                <p class="text-lg text-slate-400 light:text-slate-600 mt-4">
+                    The core technologies I use to build, transform, and analyze data.
+                </p>
+            </div>
+            
+            <div class="reveal grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <!-- Column 1: Languages & Tools -->
+                <div class="glass-panel p-6">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="terminal" class="w-6 h-6 text-accent-amber"></i>
+                        <h3 class="text-xl font-bold text-light dark:text-light light:text-dark">Languages & Tools</h3>
+                    </div>
+                    <ul class="space-y-3 mt-6">
+                        <li class="skill-badge w-full text-left">Python</li>
+                        <li class="skill-badge w-full text-left">SQL</li>
+                        <li class="skill-badge w-full text-left">PySpark</li>
+                        <li class="skill-badge w-full text-left">Java</li>
+                        <li class="skill-badge w-full text-left">Git & GitHub</li>
+                    </ul>
+                </div>
+                
+                <!-- Column 2: Data Engineering & Cloud -->
+                <div class="glass-panel p-6">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="database-zap" class="w-6 h-6 text-primary-to"></i>
+                        <h3 class="text-xl font-bold text-light dark:text-light light:text-dark">Data Engineering & Cloud</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-6">
+                        <span class="skill-badge">Microsoft Fabric</span>
+                        <span class="skill-badge">Azure Data Factory</span>
+                        <span class="skill-badge">Azure Databricks</span>
+                        <span class="skill-badge">Apache Spark</span>
+                        <span class="skill-badge">Snowflake</span>
+                        <span class="skill-badge">ETL Pipelines</span>
+                        <span class="skill-badge">Data Modeling & Warehousing</span>
+                    </div>
+                </div>
+
+                <!-- Column 3: Analytics & ML -->
+                <div class="glass-panel p-6">
+                    <div class="flex items-center space-x-3">
+                        <i data-lucide="brain-circuit" class="w-6 h-6 text-accent-mint"></i>
+                        <h3 class="text-xl font-bold text-light dark:text-light light:text-dark">Analytics & ML</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-6">
+                        <span class="skill-badge">Machine Learning</span>
+                        <span class="skill-badge">Deep Learning</span>
+                        <span class="skill-badge">Generative AI</span>
+                        <span class="skill-badge">LLMs</span>
+                        <span class="skill-badge">Feature Engineering</span>
+                        <span class="skill-badge">Exploratory Data Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          =================================
+          TIMELINE
+          =================================
+        -->
+        <section id="timeline" class="py-24 md:py-32 scroll-mt-20">
+            <!-- Section Header -->
+            <div class="reveal max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-light dark:text-light light:text-dark">
+                    Career Timeline
+                </h2>
+                <p class="text-lg text-slate-400 light:text-slate-600 mt-4">
+                    My professional and academic journey, from education to certifications and real-world experience.
+                </p>
+            </div>
+            
+            <div class="reveal timeline-container mt-12">
+                <ul class="timeline-list">
+                    <!-- Education -->
+                    <li style="--accent-color:#4F46E5">
+                        <div class="timeline-date">2022 – 2026</div>
+                        <div class="timeline-title">B.Tech – Artificial Intelligence & Data Science</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Panimalar Engineering College, Chennai</div>
+                            Pursuing Bachelor of Technology in AI & Data Science with focus on machine learning, data engineering, and cloud technologies.
+                        </div>
+                    </li>
+
+                    <!-- NPTEL Cloud IoT Edge ML -->
+                    <li style="--accent-color:#06B6D4">
+                        <div class="timeline-date">Feb – Apr 2023</div>
+                        <div class="timeline-title">NPTEL: Cloud IoT Edge ML (Silver Badge – Elite)</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">IIT Kanpur | 8-Week Online Certification</div>
+                            Gained foundational knowledge of Cloud Computing, IoT, Edge, and Machine Learning concepts through intensive coursework.
+                        </div>
+                    </li>
+
+                    <!-- Nasscom Data Science -->
+                    <li style="--accent-color:#00D1A1">
+                        <div class="timeline-date">Nov 2023</div>
+                        <div class="timeline-title">NASSCOM: Data Science for Beginners</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">NASSCOM</div>
+                            Completed industry-aligned certification on data science fundamentals approved by the Government of India.
+                        </div>
+                    </li>
+
+                    <!-- NPTEL+ Workshop -->
+                    <li style="--accent-color:#FFB020">
+                        <div class="timeline-date">Feb 17–18, 2024</div>
+                        <div class="timeline-title">NPTEL+ Workshop: Azure Data Engineering</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">NPTEL+ Workshop / IIT Madras</div>
+                            Hands-on workshop on Azure-based Data Engineering workflows and architecture with practical implementations.
+                        </div>
+                    </li>
+
+                    <!-- Postman API Expert -->
+                    <li style="--accent-color:#FF6B6B">
+                        <div class="timeline-date">Mar 25, 2024</div>
+                        <div class="timeline-title">Postman API Fundamentals Student Expert</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Postman</div>
+                            Demonstrated proficiency in API development including GET, POST, PATCH, DELETE requests, handling parameters, headers, response codes, and API key authorization.
+                        </div>
+                    </li>
+
+                    <!-- Feynn Labs Internship -->
+                    <li style="--accent-color:#8B5CF6">
+                        <div class="timeline-date">Mar 8 – May 8, 2024</div>
+                        <div class="timeline-title">Machine Learning Intern</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Feynn Labs (Remote)</div>
+                            Completed 2-month internship focused on AI Product/Service Prototyping, Market Segmentation using Machine Learning, and AI Business & Financial Modelling.
+                            <p class="text-xs text-slate-500 light:text-slate-500 mt-2">Certificate issued on June 2, 2024</p>
+                        </div>
+                    </li>
+
+                    <!-- MS DP-600 -->
+                    <li style="--accent-color:#4F46E5">
+                        <div class="timeline-date">Jun 24, 2024</div>
+                        <div class="timeline-title">Microsoft Certified: Fabric Analytics Engineer (DP-600)</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Microsoft Certification</div>
+                            Verified expertise in building and managing analytics solutions using Microsoft Fabric and Power BI.
+                        </div>
+                    </li>
+
+                    <!-- Hidevs Gen AI -->
+                    <li style="--accent-color:#06B6D4">
+                        <div class="timeline-date">2024 – Q2</div>
+                        <div class="timeline-title">HiDevs Gen AI Program (Cohort–1)</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Hidevs</div>
+                            In-depth learning on Generative AI concepts, RAG (Retrieval-Augmented Generation), prompt engineering, LLM applications, tools & techniques, and deployments.
+                        </div>
+                    </li>
+
+                    <!-- MS DP-700 -->
+                    <li style="--accent-color:#00D1A1">
+                        <div class="timeline-date">Jun 18, 2025</div>
+                        <div class="timeline-title">Microsoft Certified: Fabric Data Engineer (DP-700)</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Microsoft Certification</div>
+                            Validated ability to design, implement, and manage scalable data engineering solutions on Microsoft Fabric.
+                            <p class="text-xs text-slate-500 light:text-slate-500 mt-2">Valid until June 19, 2026</p>
+                        </div>
+                    </li>
+
+                    <!-- Ongoing Learning -->
+                    <li style="--accent-color:#FFB020">
+                        <div class="timeline-date">Present</div>
+                        <div class="timeline-title">Continuous Learning & Development</div>
+                        <div class="timeline-descr">
+                            <div class="text-md font-medium text-slate-300 light:text-slate-700 mb-2">Self-Directed</div>
+                            Continuously exploring and expanding skills in AI, Data Engineering, Analytics, and emerging cloud technologies to stay at the forefront of data innovation.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 
+          =================================
+          CONTACT CTA
+          =================================
+        -->
+        <section id="contact" class="py-24 md:py-32 scroll-mt-20">
+            <div class="reveal glass-panel p-8 md:p-12 lg:p-16 relative overflow-hidden">
+                <!-- Background glow -->
+                <div class="absolute -top-1/2 -left-1/4 w-full h-full bg-primary/20 blur-[100px] opacity-50 rounded-full animate-float" style="animation-delay: 1s;"></div>
+                <div class="absolute -bottom-1/2 -right-1/4 w-full h-full bg-primary-to/20 blur-[100px] opacity-50 rounded-full animate-float"></div>
+
+                <div class="relative z-10 max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-light dark:text-light light:text-dark">
+                        Let's Build Something
+                    </h2>
+                    <p class="text-lg text-slate-300 light:text-slate-600 mt-4">
+                        I'm currently available for new opportunities. Whether you have a project in mind, a question, or just want to connect, feel free to reach out.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
+                        <!-- Copy Email -->
+                        <div class="relative">
+                            <input id="email-field" type="text" value="paramasivamp886@gmail.com" class="w-full pl-4 pr-12 py-3 bg-slate-700/50 light:bg-slate-200/80 border border-slate-600/50 light:border-slate-300/50 rounded-lg font-mono text-sm text-slate-300 light:text-slate-700 transition-colors" readonly>
+                            <button class="copy-button absolute right-1 top-1 bottom-1 p-2 rounded-md text-slate-400 hover:bg-slate-600/50 light:hover:bg-slate-300/80 hover:text-white light:hover:text-slate-800 transition-colors" data-copy-value="paramasivamp886@gmail.com" aria-label="Copy email address">
+                                <i data-lucide="copy" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Copy Phone -->
+                        <div class="relative">
+                            <input id="phone-field" type="text" value="+91 9514742614" class="w-full pl-4 pr-12 py-3 bg-slate-700/50 light:bg-slate-200/80 border border-slate-600/50 light:border-slate-300/50 rounded-lg font-mono text-sm text-slate-300 light:text-slate-700 transition-colors" readonly>
+                            <button class="copy-button absolute right-1 top-1 bottom-1 p-2 rounded-md text-slate-400 hover:bg-slate-600/50 light:hover:bg-slate-300/80 hover:text-white light:hover:text-slate-800 transition-colors" data-copy-value="+919514742614" aria-label="Copy phone number">
+                                <i data-lucide="copy" class="w-5 h-5"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                        <a href="https://www.linkedin.com/in/paramasivam-j-386628270/" target="_blank" rel="noopener noreferrer" 
+                            class="inline-flex items-center justify-center px-8 py-3 font-medium text-center 
+                                    text-light rounded-lg bg-gradient-to-r from-primary to-primary-to shadow-lg 
+                                    hover:shadow-primary/50 transition-shadow duration-300 focus-visible:ring-primary">
+                                <i data-lucide="linkedin" class="w-5 h-5 mr-2 -ml-1 text-current"></i>
+                                Connect on LinkedIn
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 
+      =================================
+      FOOTER
+      =================================
+    -->
+    <footer class="py-16 mt-24 border-t border-slate-700/50 light:border-slate-300/50 bg-slate-900/50 light:bg-slate-100/50">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand Section -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="logo-gradient flex items-center justify-center gap-0.5">
+                            <i data-lucide="brain-circuit" class="w-4 h-4 text-white"></i>
+                            <i data-lucide="database" class="w-3 h-3 text-white opacity-80"></i>
+                        </span>
+                        <span class="logo-text text-xl font-bold">
+                            Paramasivam J
+                        </span>
+                    </div>
+                    <p class="text-slate-400 light:text-slate-600 text-sm">
+                        Microsoft Certified Fabric Data Engineer specializing in AI, Data Engineering, and Cloud Analytics.
+                    </p>
+                    <div class="flex items-center gap-4 mt-2">
+                        <a href="https://github.com/paramasivamj" target="_blank" rel="noopener noreferrer" 
+                           class="social-icon github !w-10 !h-10" aria-label="GitHub Profile">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/paramasivam-j-386628270/" target="_blank" rel="noopener noreferrer" 
+                           class="social-icon linkedin !w-10 !h-10" aria-label="LinkedIn Profile">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="mailto:paramasivamp886@gmail.com" 
+                           class="social-icon !w-10 !h-10" aria-label="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-semibold text-light dark:text-light light:text-dark">Quick Links</h3>
+                    <div class="flex flex-col gap-2">
+                        <a href="#projects" class="text-slate-400 light:text-slate-600 hover:text-primary transition-colors text-sm">
+                            Projects
+                        </a>
+                        <a href="#skills" class="text-slate-400 light:text-slate-600 hover:text-primary transition-colors text-sm">
+                            Skills
+                        </a>
+                        <a href="#timeline" class="text-slate-400 light:text-slate-600 hover:text-primary transition-colors text-sm">
+                            Timeline
+                        </a>
+                        <a href="#contact" class="text-slate-400 light:text-slate-600 hover:text-primary transition-colors text-sm">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-semibold text-light dark:text-light light:text-dark">Certifications</h3>
+                    <div class="flex flex-col gap-3">
+                        <!-- Microsoft Fabric Data Engineer Associate -->
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/PARAMASIVAMJ-6233/BA747938A2C1B70E?sharingId=267E1176F019F868" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-3 p-3 rounded-lg border border-slate-700/50 light:border-slate-300/50 hover:border-primary/50 transition-all duration-300 hover:bg-slate-800/30 light:hover:bg-slate-200/50 group">
+                            <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="award" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="text-sm font-semibold text-light dark:text-light light:text-dark group-hover:text-primary transition-colors">
+                                    Fabric Data Engineer Associate
+                                </div>
+                                <div class="text-xs text-slate-400 light:text-slate-600">Microsoft</div>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-primary transition-colors"></i>
+                        </a>
+
+                        <!-- Microsoft Fabric Analytics Engineer Associate -->
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/PARAMASIVAMJ-6233/69DA64CCCFDE18BF?sharingId=267E1176F019F868" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="flex items-center gap-3 p-3 rounded-lg border border-slate-700/50 light:border-slate-300/50 hover:border-primary/50 transition-all duration-300 hover:bg-slate-800/30 light:hover:bg-slate-200/50 group">
+                            <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="award" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <div class="flex-grow">
+                                <div class="text-sm font-semibold text-light dark:text-light light:text-dark group-hover:text-primary transition-colors">
+                                    Fabric Analytics Engineer Associate
+                                </div>
+                                <div class="text-xs text-slate-400 light:text-slate-600">Microsoft</div>
+                            </div>
+                            <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-primary transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="border-t border-slate-700/50 light:border-slate-300/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-center md:text-left">
+                    <div class="text-sm text-slate-400 light:text-slate-600">
+                        &copy; <span id="footer-year"></span> Paramasivam J. All rights reserved.
+                    </div>
+                    <div class="text-xs font-mono text-slate-500 light:text-slate-500 mt-1">
+                        Built with ❤️ using HTML, CSS & JavaScript
+                    </div>
+                </div>
+                <div class="text-xs font-mono text-slate-500 light:text-slate-500">
+                    Last Deploy: <span id="last-deploy" class="text-slate-400 light:text-slate-600"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
