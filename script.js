@@ -125,11 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Function to set initial theme on page load
+    
+    // Function to set initial theme on page load - DARK MODE AS DEFAULT
     const setInitialTheme = () => {
         const storedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initialTheme = storedTheme ? storedTheme : (systemPrefersDark ? 'dark' : 'light');
+        // Always default to dark mode unless user explicitly chose light
+        const initialTheme = storedTheme ? storedTheme : 'dark';
         setTheme(initialTheme);
     };
 
